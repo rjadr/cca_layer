@@ -11,11 +11,11 @@ import lasagne
 import theano
 import numpy as np
 
-from config.settings import EXP_ROOT
-from run_train import select_model, select_data
+from cca_layer.config.settings import EXP_ROOT
+from cca_layer.run_train import select_model, select_data
 
-from utils.batch_iterators import batch_compute2
-from utils.train_utils import eval_retrieval
+from cca_layer.utils.batch_iterators import batch_compute2
+from cca_layer.utils.train_utils import eval_retrieval
 
 
 def flip_variables(v1, v2):
