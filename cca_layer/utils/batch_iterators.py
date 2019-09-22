@@ -30,7 +30,7 @@ def batch_compute1(X, compute, batch_size, verbose=False, prepare=None):
     n_batches = int(np.ceil(float(n_samples) / batch_size))
     
     # iterate batches
-    for i_batch in xrange(n_batches):
+    for i_batch in range(n_batches):
 
         if verbose:
             print("Processing batch %d / %d" % (i_batch + 1, n_batches), end='\r')
