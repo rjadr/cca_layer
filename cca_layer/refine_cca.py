@@ -17,7 +17,7 @@ from run_train import select_model, select_data
 from utils.batch_iterators import batch_compute1
 
 from utils.cca import CCA
-from cca_layer.models.lasagne_extensions.layers.cca import CCALayer
+from models.lasagne_extensions.layers.cca import CCALayer
 
 
 if __name__ == '__main__':
