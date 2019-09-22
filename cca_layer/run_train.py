@@ -25,7 +25,7 @@ def select_model(model_path):
     model_str = model_str.split('.py')[0]
     exec('from models import ' + model_str + ' as model')
 
-    from utils.train_utils import fit
+    from cca_layer.utils.train_utils import fit
 
     model.EXP_NAME = model_str
     return model, fit
