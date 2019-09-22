@@ -191,7 +191,7 @@ class MultiviewPoolIteratorUnsupervised(object):
         # compute current epoch index
         idx_epoch = np.mod(self.epoch_counter, self.n_epochs)
 
-        for i in range((n_samples + bs - 1) / bs):
+        for i in range((n_samples + bs - 1) // bs):
 
             i_start = i * bs + idx_epoch * self.k_samples
             i_stop = (i + 1) * bs + idx_epoch * self.k_samples
