@@ -79,7 +79,7 @@ class CCA(object):
             # workaround to flip axis of projection vector
             V1 = np.dot(H1bar.T, self.U)
             V2 = np.dot(H2bar.T, self.V)
-            for d in xrange(H1bar.shape[0]):
+            for d in range(H1bar.shape[0]):
                 X = np.hstack([V1[:, d:d+1], V2[:, d:d+1]])
                 X -= X.mean(axis=0)
                 C = X.T.dot(X)
