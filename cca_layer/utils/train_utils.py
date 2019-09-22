@@ -10,7 +10,10 @@ import copy
 import time
 import itertools
 import numpy as np
-import cPickle as pickle
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
 
 import lasagne
 import theano
