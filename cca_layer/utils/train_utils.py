@@ -16,9 +16,9 @@ import lasagne
 import theano
 import theano.tensor as T
 
-from plotting import BColors
-from batch_iterators import threaded_generator_from_iterator
-from cca import CCA
+from cca_layer.utils.plotting import BColors
+from cca_layer.utils.batch_iterators import threaded_generator_from_iterator
+from cca_layer.utils.cca import CCA
 from cca_layer.models.lasagne_extensions.layers.cca import CCALayer
 
 # init color printer
