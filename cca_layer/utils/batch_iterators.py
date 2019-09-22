@@ -112,7 +112,7 @@ def threaded_generator(generator, num_cached=10):
     """
     Threaded generator
     """
-    import Queue
+    import queue as Queue
     queue = Queue.Queue(maxsize=num_cached)
     queue = Queue.Queue(maxsize=num_cached)
     end_marker = object()
