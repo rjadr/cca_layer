@@ -1,7 +1,7 @@
 
 from __future__ import print_function
 
-from plotting import BColors
+from cca_layer.utils.plotting import BColors
 
 import lasagne
 import numpy as np
