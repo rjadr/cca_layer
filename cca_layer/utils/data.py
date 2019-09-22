@@ -37,10 +37,15 @@ class MultiViewDataPool(object):
         # collect train entities
         # (this has to be changed if there is no clear 1:1 correspondence between the two views)
         # (e.g. one image that has five different captions to train on)
-        for i_view1 in xrange(self.observations_view1.shape[0]):
-            cur_entities = np.asarray([i_view1, i_view1])
-            self.train_entities = np.vstack((self.train_entities, cur_entities))
-
+        try:
+            for i_view1 in xrange(self.observations_view1.shape[0]):
+                cur_entities = np.asarray([i_view1, i_view1])
+                self.train_entities = np.vstack((self.train_entities, cur_entities))
+        except NameError:
+            for i_view1 in range(self.observations_view1.shape[0]):
+                cur_entities = np.asarray([i_view1, i_view1])
+                self.train_entities = np.vstack((self.train_entities, cur_entities))
+            
         # number of train samples
         self.shape = [self.train_entities.shape[0]]
 
