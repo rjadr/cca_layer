@@ -2,7 +2,7 @@
 import os
 import pickle
 import numpy as np
-from config.settings import DATA_ROOT
+from cca_layer.config.settings import DATA_ROOT
 
 
 class MultiViewDataPool(object):
